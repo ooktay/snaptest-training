@@ -1,0 +1,14 @@
+{
+  "iso code": {
+    "baseUrlKey": "countryApi",
+    "uriPath": "country/get/iso2code/{countryCode}",
+    "queryParameters" : [
+    ],
+    "method": "GET",
+    "authentication": {
+      "method": "Basic",
+      "user": "user",
+      "password": "password"
+    }
+  }
+}

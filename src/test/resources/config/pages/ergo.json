@@ -1,0 +1,48 @@
+{
+  "ergo home": {
+    "baseUrlKey": "ergo",
+    "uriPath": "",
+    "elements": {
+      "content": "body",
+      "TCKN": "#ctl00_ContentLeft_txtTcKimlikNo",
+      "Cep No": "#ctl00_ContentLeft_txtPhoneNumber",
+      "Plaka": "#ctl00_ContentLeft_txtPlaka",
+      "verilerim korunsun": "#ctl00_ContentLeft_txtCbOnay",
+      "Tamam": ".OverlayClose",
+      "iletisim": "//a[@title='İletişim']"
+    }
+  },
+  "mevcut arac": {
+    "parent": "ergo home",
+    "uriPath": "ergo-hizli-teklif-mevcut-arac",
+    "elements": {
+      "aracin yili" : "#ctl00_HeadImg_ddlYear",
+      "aracin markasi" : "#ctl00_HeadImg_ddlBrand",
+      "aracin modeli": "#ctl00_HeadImg_ddlModel",
+      "tescil": "#ctl00_HeadImg_txtAsbisRuhsatNo"
+    }
+  },
+  "teklif detay" : {
+    "parent": "ergo home",
+    "uriPath": "ergo-hizli-teklif-alma",
+    "elements": {
+
+    }
+  },
+  "muhendislik sigortalari": {
+    "parent": "ergo home",
+    "uriPath": "muhendislik-sigortalari",
+    "elements": {
+      "content": "body",
+      "sehir": "#enYakinErgoCity",
+      "ilce": "#enYakinErgoDistrict"
+    }
+  },
+  "acentelerimiz": {
+    "parent": "ergo home",
+    "uriPath": "ergo-sigorta-acenteleri",
+    "elements": {
+
+    }
+  }
+}

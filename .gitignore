@@ -1,0 +1,11 @@
+.gradle
+build
+/rerun
+/tools
+.idea
+/out
+*.iml
+/gradle\.properties
+/gradlew
+/gradlew.*
+gradle/wrapper/gradle-wrapper\.jar

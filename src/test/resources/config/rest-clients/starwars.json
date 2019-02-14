@@ -1,0 +1,6 @@
+{
+  "star wars people": {
+    "baseUrlKey": "starWarsApi",
+    "uriPath": "people/{id}/"
+  }
+}

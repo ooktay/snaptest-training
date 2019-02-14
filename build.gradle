@@ -1,0 +1,51 @@
+buildscript {
+    String artifactoryUrl = 'https://artifactory.snapbytes.com/artifactory/dist/'
+    boolean useArtifactory = false
+    def repositoriesClosure
+    if (rootProject.hasProperty('ARTIFACTORY_USER')) repositoriesClosure = {
+        mavenLocal()
+        jcenter()
+        maven { url 'https://plugins.gradle.org/m2/' }
+        maven {
+            credentials {
+                username ARTIFACTORY_USER
+                password ARTIFACTORY_PASSWORD
+            }
+            url artifactoryUrl
+        }
+    } else if (useArtifactory) repositoriesClosure = {
+        mavenLocal()
+        maven {
+            url artifactoryUrl
+        }
+    } else repositoriesClosure = {
+        mavenLocal()
+        jcenter()
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+    ext.repositoriesClosure = repositoriesClosure
+
+    repositories repositoriesClosure
+    dependencies {
+        classpath group:'com.snapbytes', name : 'snaptest', version: '0.9.+', changing: true
+    }
+}
+repositories repositoriesClosure
+
+group "com.snapbytes"
+version 1.0
+
+apply plugin: 'com.snapbytes.snaptest'
+
+snaptest {
+    useWebClient = true
+    useRestClient = true
+    useSoapClient = true
+    stepsPackages = ['com.snapbytes.snaptest.step','com.snapbytes.training']
+}
+
+
+task generateSampleWSClient(group:'cxf', type: GenerateCxfClient) {
+    //http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL
+    wsdlFile = file('src/test/resources/wsdl/SampleWS.wsdl')
+}

@@ -1,0 +1,21 @@
+{
+  "statoids home": {
+    "baseUrlKey": "statoids",
+    "uriPath": "",
+    "elements": {
+      "content": "body",
+      "all countries": "table",
+      "all countries headers": "//tr[@class='hd']/th",
+      "all countries cells": "//tr[@class='o' | @class='e']/td"
+    }
+  },
+  "countrycode home": {
+    "baseUrlKey": "countrycode",
+    "uriPath": "",
+    "elements": {
+      "content": "body",
+      "countries": "div.visible-md table[data-sort-name='countrycode']",
+      "countries headers": "div.visible-md table[data-sort-name='countrycode'] > thead > tr > th > div.th-inner"
+    }
+  }
+}

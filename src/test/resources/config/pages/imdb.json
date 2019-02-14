@@ -1,0 +1,19 @@
+{
+  "imdb home": {
+    "baseUrlKey": "imdb",
+    "uriPath": "",
+    "elements": {
+      "content": "body",
+      "search": "#navbar-query",
+      "search button": ".magnifyingglass",
+      "first search result": "(//*[@class='result_text'])[1]"
+    }
+  },
+  "search results" : {
+    "parent": "imdb home",
+    "uriPath": "find",
+    "elements": {
+
+    }
+  }
+}
