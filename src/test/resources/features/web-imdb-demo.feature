@@ -1,9 +1,10 @@
+@ignore
 Feature: IMDB web site test automation with Snaptest
 
   Background:
     Given I open browser
 
-  @debug
+
   Scenario: Movie search
 
     Given I open imdb home page

@@ -42,6 +42,7 @@ snaptest {
     useRestClient = true
     useSoapClient = true
     stepsPackages = ['com.snapbytes.snaptest.step','com.snapbytes.training']
+//    parallelRuns = 4
 }
 
 

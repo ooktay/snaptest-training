@@ -1,9 +1,10 @@
+@ignore
 Feature: Rest Service Demo
 
   Background:
     Given I open browser
 
-  @debug
+
   Scenario: Country code
     When I call iso code rest service with parameters:
       | countryCode | TR |
